@@ -1,5 +1,6 @@
 //chakra-ui
 import { Box, Flex, Heading, Button, Icon, Table, Thead, Tr, Th, Td, Checkbox, Tbody, Text } from "@chakra-ui/react";
+import React from "react";
 
 //React
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
@@ -7,6 +8,7 @@ import { RiAddLine, RiPencilLine } from "react-icons/ri";
 //components
 import { Header } from '../../components/Header';
 import { Sidebar } from "../../components/Sidebar";
+import { Pagination } from "../../components/Pagination";
 
 export default function listUsers() {
   return (
@@ -20,7 +22,7 @@ export default function listUsers() {
           <Flex mb="8" justify="space-between" align="center">
             <Heading size="lg" fontWeight="normal">Users</Heading>
             <Button
-               cursor="pointer"
+              cursor="pointer"
               as="a"
               size="sm"
               fontSize="sm"
@@ -56,19 +58,20 @@ export default function listUsers() {
                 <Td>19 de Outubro, 2021</Td>
                 <Td>
                   <Button
-                  cursor="pointer"
+                    cursor="pointer"
                     as="a"
                     size="sm"
                     fontSize="sm"
                     fontWeight="normal"
                     colorScheme="purple"
-                    leftIcon={<Icon as={RiPencilLine} fontSize="16"/>}>
+                    leftIcon={<Icon as={RiPencilLine} fontSize="16" />}>
                     Edit
                   </Button>
                 </Td>
               </Tr>
             </Tbody>
           </Table>
+          <Pagination />
         </Box>
       </Flex>
     </Box>
